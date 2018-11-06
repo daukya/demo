@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RegressionSuite">
+	<test name="juniorviec be test">
+		<classes>
+			<!-- <class name="runTests.TestRunner" /> -->
+			<class name="runTests.Register" />
+		</classes>
+	</test>
+</suite>
