@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import net.serenitybdd.core.annotations.findby.By;
 
-public class Register {
+public class RegisterSuccessfully {
 	private static String dirData = "C:\\Users\\LAPTOP88\\Documents\\JuniorViec\\juniorviec-automation-web\\automation-testing\\data.xlsx";
 
 	private WebDriver driver;
