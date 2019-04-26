@@ -1,10 +1,15 @@
 package javaautomationcidemo.thucydides.cucumber.pages;
 
 
+import com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.apache.xpath.XPathContext;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 @DefaultUrl("https://juniorviec.com/")
 public class LoginPage extends PageObject {
@@ -23,6 +28,12 @@ public class LoginPage extends PageObject {
     WebElementFacade errorMail;
     @FindBy(xpath = "//*[text()='Field is Required']")
     WebElementFacade errorInput;
+    @FindBy(xpath = "//button[@type='button']//img[@alt='vietnamese']")
+    WebElementFacade en_lang;
+    @FindBy(xpath = "//div[3]//div[1]//div[1]//div[1]")
+    WebElementFacade email_null;
+    @FindBy(xpath = " //div[4]//div[1]//div[1]//div[1]")
+    WebElementFacade pass_null;
     public void clickToLogin() {
         login_btn_tologin.click();
     }
@@ -47,5 +58,14 @@ public class LoginPage extends PageObject {
         System.out.println("letuyen"+errorMail);
         System.out.println("nguyenthanh"+errorInput);
     }
-
+    public void click_EN_lang(){
+        en_lang.click();
+    }
+    public void Email_Pass_Null(String email, String pass){
+        getDriver().manage().timeouts().implicitlyWait(130, TimeUnit.SECONDS);
+        System.out.println("con cho" + email_null.getTextValue());
+        email_null.getTextValue().equals(email);
+        pass_null.getTextValue().equals(pass);
+        getDriver().manage().timeouts().implicitlyWait(130, TimeUnit.SECONDS);
+    }
 }
