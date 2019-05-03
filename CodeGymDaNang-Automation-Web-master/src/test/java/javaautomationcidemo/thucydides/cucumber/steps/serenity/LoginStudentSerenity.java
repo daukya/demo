@@ -42,4 +42,10 @@ public class LoginStudentSerenity extends ScenarioSteps {
         String urlCurrent = loginPage.getDriver().getCurrentUrl();
         Assert.assertEquals(result, urlCurrent);
     }
+    public void click_EN_lang(){
+        loginPage.click_EN_lang();
+    }
+    public void Email_Pass_Null(String email, String pass){
+        loginPage.Email_Pass_Null(email,pass);
+    }
 }
