@@ -1,7 +1,4 @@
 package javaautomationcidemo.thucydides.cucumber.pages;
-
-
-import com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -34,6 +31,8 @@ public class LoginPage extends PageObject {
     WebElementFacade email_null;
     @FindBy(xpath = " //div[4]//div[1]//div[1]//div[1]")
     WebElementFacade pass_null;
+    @FindBy(xpath = "//div[@class='form-group global-error']//div[@class='error-input']")
+    WebElementFacade email_pass_validate;
     public void clickToLogin() {
         login_btn_tologin.click();
     }
@@ -74,6 +73,11 @@ public class LoginPage extends PageObject {
     }
     public void pass_null(){
         pass_null.getTextValue().equals("Field is Required.");
+        getDriver().getCurrentUrl().equals("https://juniorviec.com/login");
+    }
+    public void mail_valid_pass_invalid(){
+        System.out.println(email_pass_validate.getTextValue());
+        email_pass_validate.getTextValue().equals("The email or password you entered is incorrect.");
         getDriver().getCurrentUrl().equals("https://juniorviec.com/login");
     }
 }

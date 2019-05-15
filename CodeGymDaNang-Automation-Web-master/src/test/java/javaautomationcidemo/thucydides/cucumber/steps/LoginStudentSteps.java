@@ -1,4 +1,5 @@
 package javaautomationcidemo.thucydides.cucumber.steps;
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -7,6 +8,9 @@ import cucumber.api.java.en.When;
 import javaautomationcidemo.thucydides.cucumber.configs.WebProfile;
 import javaautomationcidemo.thucydides.cucumber.steps.serenity.LoginStudentSerenity;
 import net.thucydides.core.annotations.Steps;
+
+import java.util.List;
+import java.util.logging.Logger;
 
 
 public class LoginStudentSteps{
@@ -85,5 +89,19 @@ public class LoginStudentSteps{
     @Then("^Check validate password field$")
     public void checkValidatePasswordField() throws Throwable {
         loginStudentSerenity.pass_null();
+    }
+
+    @And("^enter email valid and pass is invalid$")
+    public void enterEmailValidAndPassIsInvalid(DataTable data) throws Throwable {
+        List<String> list = data.asList(String.class);
+        System.out.println("Username - " + list.get(0));
+        System.out.println("Password - " + list.get(1));
+        loginStudentSerenity.enterEmail(list.get(0));
+        loginStudentSerenity.enterPass(list.get(1));
+    }
+
+    @Then("^login fail and show validate message$")
+    public void loginFailAndShowValidateMessage() throws Throwable {
+        loginStudentSerenity.mail_valid_pass_invalid();
     }
 }
