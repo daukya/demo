@@ -66,4 +66,14 @@ public class LoginStudentSteps{
     public void validateFieldAnd(String email, String pass){
         loginStudentSerenity.Email_Pass_Null(email,pass);
     }
+
+    @And("^enter password correct$")
+    public void enterPasswordCorrect() throws Throwable {
+         loginStudentSerenity.enterPass("123123");
+    }
+
+    @Then("^Check validate Email field$")
+    public void checkValidateEmailField() throws Throwable {
+        loginStudentSerenity.email_Null();
+    }
 }

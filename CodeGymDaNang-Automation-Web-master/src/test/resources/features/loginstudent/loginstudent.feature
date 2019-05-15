@@ -28,7 +28,7 @@ Feature: Login
       | EN       | username | pass |
       | VN       | username | pass |
 
-  @2
+  @
   Scenario Outline: Validate email and pass when fields null
     Given Open browser to login
     When click login
@@ -37,4 +37,11 @@ Feature: Login
     Examples:
       | email              | pass               |
       | Field is Required. | Field is Required. |
+  @2
+  Scenario:Verify that Email field is empty but password isn't empty
+    Given Open browser to login
+    When click login
+    And enter password correct
+    And click enter login
+    Then Check validate Email field
 

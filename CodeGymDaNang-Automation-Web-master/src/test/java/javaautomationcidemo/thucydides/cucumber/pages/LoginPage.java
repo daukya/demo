@@ -68,4 +68,8 @@ public class LoginPage extends PageObject {
         pass_null.getTextValue().equals(pass);
         getDriver().manage().timeouts().implicitlyWait(130, TimeUnit.SECONDS);
     }
+    public void email_Null(){
+        email_null.getTextValue().equals("Field is Required.");
+        getDriver().getCurrentUrl().equals("https://juniorviec.com/login");
+    }
 }
