@@ -37,11 +37,18 @@ Feature: Login
     Examples:
       | email              | pass               |
       | Field is Required. | Field is Required. |
-  @2
+  @
   Scenario:Verify that Email field is empty but password isn't empty
     Given Open browser to login
     When click login
     And enter password correct
     And click enter login
     Then Check validate Email field
+    @2
+    Scenario:Verify that Email field isn't empty but password is empty
+      Given Open browser to login
+      When click login
+      And enter email correct
+      And click enter login
+      Then Check validate password field
 

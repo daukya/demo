@@ -51,4 +51,7 @@ public class LoginStudentSerenity extends ScenarioSteps {
     public void email_Null(){
        loginPage.email_Null();
     }
+    public void pass_null(){
+        loginPage.pass_null();
+    }
 }

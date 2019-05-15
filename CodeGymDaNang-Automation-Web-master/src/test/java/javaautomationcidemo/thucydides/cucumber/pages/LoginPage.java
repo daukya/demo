@@ -72,4 +72,8 @@ public class LoginPage extends PageObject {
         email_null.getTextValue().equals("Field is Required.");
         getDriver().getCurrentUrl().equals("https://juniorviec.com/login");
     }
+    public void pass_null(){
+        pass_null.getTextValue().equals("Field is Required.");
+        getDriver().getCurrentUrl().equals("https://juniorviec.com/login");
+    }
 }
