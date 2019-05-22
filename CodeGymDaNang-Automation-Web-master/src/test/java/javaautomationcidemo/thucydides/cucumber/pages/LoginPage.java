@@ -85,4 +85,7 @@ public class LoginPage extends PageObject {
         email_pass_validate.getTextValue().equals("The email or password you entered is incorrect.");
         getDriver().getCurrentUrl().equals("https://juniorviec.com/login");
     }
+    public void checkUrlLoginSuccess(){
+        getDriver().getCurrentUrl().equals("https://juniorviec.com/");
+    }
 }

@@ -118,4 +118,18 @@ public class LoginStudentSteps{
     public void loginFailAndShowValidateMessageWhenEmailEnterInvalidAndPassValid() throws Throwable {
         loginStudentSerenity.mail_invalid_pass_valid();
     }
+
+    @And("^enter email and pass valid$")
+    public void enterEmailAndPassValid(DataTable data) throws Throwable {
+        List<String> list = data.asList(String.class);
+        System.out.println("Username - " + list.get(0));
+        System.out.println("Password - " + list.get(1));
+        loginStudentSerenity.enterEmail(list.get(0));
+        loginStudentSerenity.enterPass(list.get(1));
+    }
+
+    @Then("^login success$")
+    public void loginSuccess() throws Throwable {
+        loginStudentSerenity.checkUrlLoginSuccess();
+    }
 }

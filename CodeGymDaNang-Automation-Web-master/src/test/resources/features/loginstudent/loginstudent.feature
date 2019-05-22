@@ -63,7 +63,7 @@ Feature: Login
     And click enter login
     Then login fail and show validate message
 
-  @2
+  @
   Scenario: Verify that Password is valid but email is invalid
     Given Open browser to login
     When click login
@@ -71,3 +71,11 @@ Feature: Login
       | lenguyenthanhtuyen@gmail.com | tinhtuyen2501 |
     And click enter login
     Then login fail and show validate message when email enter invalid and pass valid
+  @2
+  Scenario: Verify that email and password are valid
+    Given Open browser to login
+    When click login
+    And enter email and pass valid
+      | lenguyenthanhtuyen97@gmail.com | tinhtuyen2501 |
+    And click enter login
+    Then login success
