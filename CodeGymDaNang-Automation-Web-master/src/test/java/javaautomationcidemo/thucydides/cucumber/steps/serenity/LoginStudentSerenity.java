@@ -57,4 +57,7 @@ public class LoginStudentSerenity extends ScenarioSteps {
     public void mail_valid_pass_invalid(){
         loginPage.mail_valid_pass_invalid();
     }
+    public void mail_invalid_pass_valid(){
+        loginPage.mail_invalid_pass_valid();
+    }
 }
