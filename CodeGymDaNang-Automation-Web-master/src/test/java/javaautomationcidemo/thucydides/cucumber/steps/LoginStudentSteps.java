@@ -132,4 +132,9 @@ public class LoginStudentSteps{
     public void loginSuccess() throws Throwable {
         loginStudentSerenity.checkUrlLoginSuccess();
     }
+
+    @Then("^Show validate for email haven't active login yet$")
+    public void showValidateForEmailHavenTActiveLoginYet() throws Throwable {
+        loginStudentSerenity.email_inactive_pass_valid();
+    }
 }

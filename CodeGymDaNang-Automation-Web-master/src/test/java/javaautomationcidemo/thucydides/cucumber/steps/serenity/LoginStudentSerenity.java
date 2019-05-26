@@ -63,4 +63,7 @@ public class LoginStudentSerenity extends ScenarioSteps {
     public void checkUrlLoginSuccess(){
         loginPage.checkUrlLoginSuccess();
     }
+    public void email_inactive_pass_valid(){
+        loginPage.email_inactive_pass_valid();
+    }
 }
