@@ -66,4 +66,7 @@ public class LoginStudentSerenity extends ScenarioSteps {
     public void email_inactive_pass_valid(){
         loginPage.email_inactive_pass_valid();
     }
+    public void click_forgotpass(){
+        loginPage.click_forgotpass();
+    }
 }

@@ -137,4 +137,9 @@ public class LoginStudentSteps{
     public void showValidateForEmailHavenTActiveLoginYet() throws Throwable {
         loginStudentSerenity.email_inactive_pass_valid();
     }
+
+    @Then("^Login page redirect forgot pass page when click forgot pass at login page$")
+    public void loginPageRedirectForgotPassPageWhenClickForgotPassAtLoginPage() throws Throwable {
+        loginStudentSerenity.click_forgotpass();
+    }
 }

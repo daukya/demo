@@ -37,6 +37,10 @@ public class LoginPage extends PageObject {
     WebElementFacade email_inactive_pass_valid;
     @FindBy(xpath = "//a[@class='w-u-link l-pointer']")
     WebElementFacade link_active_email;
+    @FindBy(xpath ="//a[@class='lost_password']")
+    WebElementFacade link_losspass;
+    @FindBy(xpath = "https://juniorviec.com/lost-password")
+    WebElementFacade link_forgotpass_page;
     public void clickToLogin() {
         login_btn_tologin.click();
     }
@@ -95,5 +99,9 @@ public class LoginPage extends PageObject {
     public void email_inactive_pass_valid(){
         email_inactive_pass_valid.getTextValue().equals("Please verify your account. Or click here to resend a new verification email.");
         getDriver().getCurrentUrl().equals("https://juniorviec.com/login");
+    }
+    public void click_forgotpass(){
+        link_losspass.click();
+        getDriver().getCurrentUrl().equals("https://juniorviec.com/lost-password");
     }
 }
