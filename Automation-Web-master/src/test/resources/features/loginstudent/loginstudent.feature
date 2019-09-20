@@ -12,10 +12,10 @@ Feature: Login
     Examples:
       | email                          | pass          | result                       |
       | lenguyenthanhtuyen97@gmail.com | tinhtuyen2501 | https://juniorviec.com/      |
-      | lenguyenthanh99@gmail.com      | pass          | https://juniorviec.com/login |
-      | lenguyenthanhtuyen97@gmail.com | tinhtuyen     | https://juniorviec.com/login |
-      | email                          | ongnoimi      | https://juniorviec.com/login |
-      |                                |               |                              |
+#      | lenguyenthanh99@gmail.com      | pass          | https://juniorviec.com/login |
+#      | lenguyenthanhtuyen97@gmail.com | tinhtuyen     | https://juniorviec.com/login |
+#      | email                          | ongnoimi      | https://juniorviec.com/login |
+#      |                                |               |                              |
 
   @again
   Scenario Outline: Verify that all fields validate
