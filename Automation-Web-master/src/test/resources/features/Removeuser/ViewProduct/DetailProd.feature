@@ -2,7 +2,7 @@ Feature: Detail Product
   I want to view any product
   @1
   Scenario Outline:Verify that the website navigate to detail product page when user click on any product
-    Given Open home page
+    Given Open home page to click monitors button
     When Click on any product
     Then The website navigate to product detail page with correct "<Url>" and "<deviceName>" and "<Cost>" and "<detail>"
     Examples:
