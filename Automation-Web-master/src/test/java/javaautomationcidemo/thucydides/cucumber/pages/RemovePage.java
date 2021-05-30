@@ -5,7 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.support.FindBy;
 
-@DefaultUrl("https://backoffice-uat.smartlinksa.ch/")
+@DefaultUrl("https://www.demoblaze.com/")
 public class RemovePage extends PageObject {
     @FindBy(xpath = "//input[@id='username']")
     WebElementFacade username_Input;
